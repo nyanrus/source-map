@@ -5,11 +5,9 @@
  * http://opensource.org/licenses/BSD-3-Clause
  */
 
-const util = require("./util");
-const SourceMapConsumer =
-  require("../lib/source-map-consumer").SourceMapConsumer;
-const SourceMapGenerator =
-  require("../lib/source-map-generator").SourceMapGenerator;
+const util = require("./util.cjs");
+import { SourceMapConsumer } from "../lib/source-map-consumer";
+import { SourceMapGenerator } from "../lib/source-map-generator";
 
 exports["test eating our own dog food"] = async function (assert) {
   const smg = new SourceMapGenerator({

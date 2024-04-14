@@ -5,7 +5,7 @@
  * http://opensource.org/licenses/BSD-3-Clause
  */
 
-const base64VLQ = require("../lib/base64-vlq");
+import * as base64VLQ from "../lib/base64-vlq.js"
 
 const vlqs = [
   { number: -255, encoded: "/P" },
@@ -517,13 +517,14 @@ const vlqs = [
   { number: 255, encoded: "+P" },
 ];
 
-exports["test normal encoding and decoding"] = function (assert) {
-  for (let i = 0; i < vlqs.length; i++) {
-    const str = base64VLQ.encode(vlqs[i].number);
-    assert.equal(
-      vlqs[i].encoded,
-      str,
-      `number ${vlqs[i].number} should encode correctly: ${vlqs[i].encoded} == ${str}`
-    );
-  }
-};
+import { expect } from "chai";
+import { describe } from "mocha";
+
+describe("base64-vlq.js",()=>{
+  it("normal encoding and decoding",()=>{
+    for (let i = 0; i < vlqs.length; i++) {
+      const str = base64VLQ.encode(vlqs[i].number);
+      expect(vlqs[i].encoded,`number ${vlqs[i].number} should encode correctly: ${vlqs[i].encoded} == ${str}`).eq(str)
+    }
+  })
+})

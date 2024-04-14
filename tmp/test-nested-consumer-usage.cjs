@@ -1,4 +1,4 @@
-const { SourceMapConsumer, SourceMapGenerator } = require("../");
+const { SourceMapConsumer, SourceMapGenerator } = require("../source-map");
 
 const TS_MAP = {
   version: 3,

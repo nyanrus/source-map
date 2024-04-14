@@ -5,12 +5,14 @@
  * http://opensource.org/licenses/BSD-3-Clause
  */
 
-const sourceMap = require("../source-map");
+import * as sourceMap from "../lib/index.js"
+import { expect } from "chai";
 
-exports["test that the api is properly exposed in the top level"] = function (
-  assert
-) {
-  assert.equal(typeof sourceMap.SourceMapGenerator, "function");
-  assert.equal(typeof sourceMap.SourceMapConsumer, "function");
-  assert.equal(typeof sourceMap.SourceNode, "function");
-};
+describe('index.js',  () => {
+    it('the api is properly exposed in the top level',  () => {
+
+      expect(typeof sourceMap.SourceMapGenerator).to.eq("function")
+      expect(typeof sourceMap.SourceMapConsumer).to.eq("function")
+      expect(typeof sourceMap.SourceNode).to.eq("function")
+    });
+});

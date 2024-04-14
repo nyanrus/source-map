@@ -6,14 +6,10 @@
  */
 
 const util = require("./util");
-const SourceMapConsumer =
-  require("../lib/source-map-consumer").SourceMapConsumer;
-const IndexedSourceMapConsumer =
-  require("../lib/source-map-consumer").IndexedSourceMapConsumer;
-const BasicSourceMapConsumer =
-  require("../lib/source-map-consumer").BasicSourceMapConsumer;
-const SourceMapGenerator =
-  require("../lib/source-map-generator").SourceMapGenerator;
+import { SourceMapConsumer } from "../lib/source-map-consumer";
+import { IndexedSourceMapConsumer } from "../lib/source-map-consumer";
+import { BasicSourceMapConsumer } from "../lib/source-map-consumer";
+import { SourceMapGenerator } from "../lib/source-map-generator";
 
 exports["test that we can instantiate with a string or an object"] =
   async function (assert) {

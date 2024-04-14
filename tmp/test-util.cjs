@@ -5,7 +5,7 @@
  * http://opensource.org/licenses/BSD-3-Clause
  */
 
-const libUtil = require("../lib/util");
+import * as libUtil from "../lib/util"
 exports["test normalize()"] = function (assert) {
   assert.equal(libUtil.normalize("/.."), "/");
   assert.equal(libUtil.normalize("/../"), "/");

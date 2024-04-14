@@ -5,11 +5,9 @@
  * http://opensource.org/licenses/BSD-3-Clause
  */
 
-const SourceMapGenerator =
-  require("../lib/source-map-generator").SourceMapGenerator;
-const SourceMapConsumer =
-  require("../lib/source-map-consumer").SourceMapConsumer;
-const SourceNode = require("../lib/source-node").SourceNode;
+import { SourceMapConsumer } from "../lib/source-map-consumer";
+import { SourceMapGenerator } from "../lib/source-map-generator";
+import { SourceNode } from "../lib/source-node";
 const util = require("./util");
 
 exports["test some simple stuff"] = function (assert) {

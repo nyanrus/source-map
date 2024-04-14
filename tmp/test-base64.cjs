@@ -5,7 +5,7 @@
  * http://opensource.org/licenses/BSD-3-Clause
  */
 
-const base64 = require("../lib/base64");
+import * as base64 from "../lib/base64.js"
 
 exports["test out of range encoding"] = function (assert) {
   assert.throws(function () {

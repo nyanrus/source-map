@@ -5,7 +5,7 @@
  * http://opensource.org/licenses/BSD-3-Clause
  */
 
-const binarySearch = require("../lib/binary-search");
+import * as binarySearch from "../lib/binary-search"
 
 function numberCompare(a, b) {
   return a - b;
