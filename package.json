@@ -73,15 +73,15 @@
   },
   "devDependencies": {
     "c8": "^7.12.0",
+    "chai": "^5.1.0",
     "doctoc": "^2.2.1",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "mocha": "^10.4.0",
     "prettier": "^2.7.1",
-    "chai": "^5.1.0"
+    "vite": "^5.2.10"
   },
   "dependencies": {
-
     "whatwg-url": "^7.0.0"
   }
 }
